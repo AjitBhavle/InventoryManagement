@@ -21,7 +21,10 @@ public class ItemInventoryDetails {
 
 	@JsonProperty("batteryPrice")
 	private Integer batteryPrice = null;
-
+    
+	@JsonProperty("batteryQuantity")
+	private Integer batteryQuantity = null;
+	
 	@JsonProperty("batteryModel")
 	private String batteryModel = null;
 
@@ -71,6 +74,26 @@ public class ItemInventoryDetails {
 		this.batteryId = batteryId;
 	}
 
+	public ItemInventoryDetails batteryQuantity(Integer batteryQuantity) {
+		this.batteryQuantity = batteryQuantity;
+		return this;
+	}
+
+	/**
+	 * battery model number
+	 * 
+	 * @return batteryModel
+	 **/
+	@ApiModelProperty(value = "battery Quantity")
+
+	public Integer getBatteryQuantity() {
+		return batteryQuantity;
+	}
+
+	public void setBatteryQuantity(Integer batteryQuantity) {
+		this.batteryQuantity = batteryQuantity;
+	}
+	
 	public ItemInventoryDetails batteryPrice(Integer batteryPrice) {
 		this.batteryPrice = batteryPrice;
 		return this;
