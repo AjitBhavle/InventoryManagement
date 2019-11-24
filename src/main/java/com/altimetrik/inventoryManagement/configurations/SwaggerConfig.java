@@ -14,15 +14,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 	@EnableSwagger2
 	public class SwaggerConfig {
-	public ApiInfo apiInfo() {
+	ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("Battery Bank inventory System")
-            .description("Battery Bank inventory System")
+            .title("Battery Bank Billing System")
+            .description("Battery Bank Billing System")
             .license("altimatrik")
             .licenseUrl("http://altimetrik.batterybank.com/license")
             .termsOfServiceUrl("")
             .version("1.0.0")
-            .contact(new Contact("","", "ibanerjee@altimetrik.com"))
+            .contact(new Contact("","", "pkumar6808@altimetrik.com"))
             .build();
     }    
 	@Bean
