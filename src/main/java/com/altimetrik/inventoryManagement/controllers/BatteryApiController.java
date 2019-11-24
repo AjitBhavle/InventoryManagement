@@ -2,6 +2,7 @@ package com.altimetrik.inventoryManagement.controllers;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -22,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.altimetrik.inventoryManagement.controllerInterface.BatteryApi;
 import com.altimetrik.inventoryManagement.model.Battery;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.swagger.annotations.ApiParam;
@@ -35,13 +37,14 @@ public class BatteryApiController implements BatteryApi {
 
     private final HttpServletRequest request;
 
-    private HttpHeaders headers=new HttpHeaders();
+    private HttpHeaders headers;
     @Autowired
     RestTemplate restTemplate;
     @Autowired
     public BatteryApiController(ObjectMapper objectMapper, HttpServletRequest request) {
         this.objectMapper = objectMapper;
         this.request = request;
+        headers=new HttpHeaders();
         
     }
 
@@ -69,10 +72,11 @@ public class BatteryApiController implements BatteryApi {
     public ResponseEntity<Battery> deletebattery(@ApiParam(value = "") @Valid @RequestParam(value = "batteryId", required = false) String batteryId) {
         String accept = request.getHeader("Accept");
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<Battery> entity = new HttpEntity<Battery>(headers);
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
         if (accept != null && accept.contains("application/xml")) {
             try {
-                return new ResponseEntity<Battery>(objectMapper.readValue("<battery>  <batteryId>123</batteryId>  <inventoryId>aeiou</inventoryId>  <batteryTypeId>123</batteryTypeId>  <betteryModel>aeiou</betteryModel>  <batteryWeight>123</batteryWeight>  <batteryManfucturingDate>aeiou</batteryManfucturingDate>  <batteryExpirationDate>aeiou</batteryExpirationDate>  <batteryCreateDate>aeiou</batteryCreateDate>  <batteryLastUpdateDate>aeiou</batteryLastUpdateDate>  <batteryLastChargeDate>aeiou</batteryLastChargeDate>  <batteryChargeDate>aeiou</batteryChargeDate>  <batteryCurrentLocation>aeiou</batteryCurrentLocation>  <batteryStatus>aeiou</batteryStatus>  <vendorId>aeiou</vendorId>  <vehicleBrand>aeiou</vehicleBrand>  <batteryCapacity>aeiou</batteryCapacity>  <batteryBrand>aeiou</batteryBrand>  <voltageOutput>aeiou</voltageOutput>  <vehicleModelName>aeiou</vehicleModelName>  <batteryCost>123</batteryCost></battery>", Battery.class), HttpStatus.NOT_IMPLEMENTED);
+                return new ResponseEntity<Battery>(objectMapper.readValue(restTemplate.exchange(
+                        "http://inventorymanagement.mocklab.io/battery?batteryId="+batteryId, HttpMethod.DELETE, entity, String.class).getBody(), Battery.class), HttpStatus.NOT_IMPLEMENTED);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/xml", e);
                 return new ResponseEntity<Battery>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -80,8 +84,12 @@ public class BatteryApiController implements BatteryApi {
         }
 
         if (accept != null && accept.contains("application/json")) {
-            return new ResponseEntity<Battery>(restTemplate.exchange(
-			        "http://inventorymanagement.mocklab.io/battery?batteryId="+batteryId, HttpMethod.DELETE, entity, Battery.class).getBody(), HttpStatus.OK);
+        	try {
+				return new ResponseEntity<Battery>(objectMapper.readValue("<battery>  <batteryId>123</batteryId>  <inventoryId>aeiou</inventoryId>  <batteryTypeId>123</batteryTypeId>  <betteryModel>aeiou</betteryModel>  <batteryWeight>123</batteryWeight>  <batteryManfucturingDate>aeiou</batteryManfucturingDate>  <batteryExpirationDate>aeiou</batteryExpirationDate>  <batteryCreateDate>aeiou</batteryCreateDate>  <batteryLastUpdateDate>aeiou</batteryLastUpdateDate>  <batteryLastChargeDate>aeiou</batteryLastChargeDate>  <batteryChargeDate>aeiou</batteryChargeDate>  <batteryCurrentLocation>aeiou</batteryCurrentLocation>  <batteryStatus>aeiou</batteryStatus>  <vendorId>aeiou</vendorId>  <vehicleBrand>aeiou</vehicleBrand>  <batteryCapacity>aeiou</batteryCapacity>  <batteryBrand>aeiou</batteryBrand>  <voltageOutput>aeiou</voltageOutput>  <vehicleModelName>aeiou</vehicleModelName>  <batteryCost>123</batteryCost></battery>", Battery.class), HttpStatus.NOT_IMPLEMENTED);
+			} catch (IOException e) {
+				log.error("Couldn't serialize response for content type application/json", e);
+                return new ResponseEntity<Battery>(HttpStatus.INTERNAL_SERVER_ERROR);
+			}
         }
 
         return new ResponseEntity<Battery>(HttpStatus.NOT_IMPLEMENTED);
@@ -90,7 +98,7 @@ public class BatteryApiController implements BatteryApi {
     public ResponseEntity<Battery> getBattery(@ApiParam(value = "") @Valid @RequestParam(value = "batteryId", required = false) String batteryId) {
         String accept = request.getHeader("Accept");
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        HttpEntity<Battery> entity = new HttpEntity<Battery>(headers);
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
         if (accept != null && accept.contains("application/xml")) {
             try {
                 return new ResponseEntity<Battery>(objectMapper.readValue("<battery>  <batteryId>123</batteryId>  <inventoryId>aeiou</inventoryId>  <batteryTypeId>123</batteryTypeId>  <betteryModel>aeiou</betteryModel>  <batteryWeight>123</batteryWeight>  <batteryManfucturingDate>aeiou</batteryManfucturingDate>  <batteryExpirationDate>aeiou</batteryExpirationDate>  <batteryCreateDate>aeiou</batteryCreateDate>  <batteryLastUpdateDate>aeiou</batteryLastUpdateDate>  <batteryLastChargeDate>aeiou</batteryLastChargeDate>  <batteryChargeDate>aeiou</batteryChargeDate>  <batteryCurrentLocation>aeiou</batteryCurrentLocation>  <batteryStatus>aeiou</batteryStatus>  <vendorId>aeiou</vendorId>  <vehicleBrand>aeiou</vehicleBrand>  <batteryCapacity>aeiou</batteryCapacity>  <batteryBrand>aeiou</batteryBrand>  <voltageOutput>aeiou</voltageOutput>  <vehicleModelName>aeiou</vehicleModelName>  <batteryCost>123</batteryCost></battery>", Battery.class), HttpStatus.NOT_IMPLEMENTED);
@@ -101,8 +109,13 @@ public class BatteryApiController implements BatteryApi {
         }
 
         if (accept != null && accept.contains("application/json")) {
-            return new ResponseEntity<Battery>(restTemplate.exchange(
-			        "http://inventorymanagement.mocklab.io/battery?batteryId="+batteryId, HttpMethod.GET, entity, Battery.class).getBody(), HttpStatus.OK);
+        	try {
+                return new ResponseEntity<Battery>(objectMapper.readValue(restTemplate.exchange(
+                        "http://inventorymanagement.mocklab.io/battery?batteryId="+batteryId, HttpMethod.GET, entity, String.class).getBody(), Battery.class), HttpStatus.NOT_IMPLEMENTED);
+            } catch (IOException e) {
+                log.error("Couldn't serialize response for content type application/xml", e);
+                return new ResponseEntity<Battery>(HttpStatus.INTERNAL_SERVER_ERROR);
+            }
         }
 
         return new ResponseEntity<Battery>(HttpStatus.NOT_IMPLEMENTED);
