@@ -43,7 +43,7 @@ pipeline {
         }
         stage ('docker run') {
             steps {
-                bat 'docker run -p 8082:8082 -d -name docker-inventorymanagement banerjeeindranil854/docker-inventorymanagement'
+                bat 'docker run -p 8082:8082 banerjeeindranil854/docker-inventorymanagement'
             }
         }
     }
