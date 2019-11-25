@@ -28,5 +28,10 @@ pipeline {
                 }
             }
         }
+        stage ('docker build') {
+            steps {
+                bat 'docker build -f Dockerfile -t banerjeeindranil854/docker-inventorymanagement .'
+            }
+        }
     }
 }
