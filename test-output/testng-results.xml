@@ -1,51 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-25T12:22:59Z" name="BatteryBankAPI" finished-at="2019-11-25T12:23:01Z" duration-ms="2575">
+  <suite started-at="2019-11-28T07:50:42Z" name="BatteryBankAPI" finished-at="2019-11-28T07:50:45Z" duration-ms="2813">
     <groups>
     </groups>
-    <test started-at="2019-11-25T12:22:59Z" name="BatteryBankAPI" finished-at="2019-11-25T12:23:01Z" duration-ms="2575">
+    <test started-at="2019-11-28T07:50:42Z" name="BatteryBankAPI" finished-at="2019-11-28T07:50:45Z" duration-ms="2813">
       <class name="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails">
-        <test-method is-config="true" signature="setupBaseUrl()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:22:58Z" name="setupBaseUrl" finished-at="2019-11-25T12:22:59Z" duration-ms="378" status="PASS">
+        <test-method is-config="true" signature="setupBaseUrl()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:42Z" name="setupBaseUrl" finished-at="2019-11-28T07:50:42Z" duration-ms="367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBaseUrl -->
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:22:59Z" name="startReport" finished-at="2019-11-25T12:22:59Z" duration-ms="90" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:42Z" name="startReport" finished-at="2019-11-28T07:50:42Z" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:22:59Z" name="testLogger" finished-at="2019-11-25T12:22:59Z" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:42Z" name="testLogger" finished-at="2019-11-28T07:50:42Z" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetails()]]>
+                <![CDATA[public void com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetailsByInvalidId()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogger -->
-        <test-method signature="getBatteryDetails()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:22:59Z" name="getBatteryDetails" finished-at="2019-11-25T12:23:01Z" duration-ms="2221" status="PASS">
+        <test-method signature="getBatteryDetailsByInvalidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:42Z" name="getBatteryDetailsByInvalidId" finished-at="2019-11-28T07:50:44Z" duration-ms="1560" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> doesn't match actual status code <404>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> doesn't match actual status code <404>.
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+at com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)
+at com.jayway.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+at com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)
+at com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetailsByInvalidId(GetBatteryDetails.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBatteryDetails -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:23:01Z" name="getResult" finished-at="2019-11-25T12:23:01Z" duration-ms="2" status="PASS">
+        </test-method> <!-- getBatteryDetailsByInvalidId -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:44Z" name="getResult" finished-at="2019-11-28T07:50:44Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getBatteryDetails status=SUCCESS method=GetBatteryDetails.getBatteryDetails()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029] output={null}]]]>
+                <![CDATA[[TestResult name=getBatteryDetailsByInvalidId status=FAILURE method=GetBatteryDetails.getBatteryDetailsByInvalidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:23:01Z" name="endReport" finished-at="2019-11-25T12:23:01Z" duration-ms="244" status="PASS">
+        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:44Z" name="testLogger" finished-at="2019-11-28T07:50:44Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetailsByValidId()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogger -->
+        <test-method signature="getBatteryDetailsByValidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:44Z" name="getBatteryDetailsByValidId" finished-at="2019-11-28T07:50:45Z" duration-ms="905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBatteryDetailsByValidId -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:45Z" name="getResult" finished-at="2019-11-28T07:50:45Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getBatteryDetailsByValidId status=SUCCESS method=GetBatteryDetails.getBatteryDetailsByValidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:45Z" name="endReport" finished-at="2019-11-28T07:50:45Z" duration-ms="236" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@2667f029]" started-at="2019-11-25T12:23:01Z" name="afterClass" finished-at="2019-11-25T12:23:01Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@1622f1b]" started-at="2019-11-28T07:50:45Z" name="afterClass" finished-at="2019-11-28T07:50:45Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

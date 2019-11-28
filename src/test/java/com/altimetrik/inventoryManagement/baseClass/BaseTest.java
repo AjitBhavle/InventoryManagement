@@ -52,7 +52,7 @@ public class BaseTest {
 		//replaceExisting - Setting to overwrite (TRUE) the existing file or append to it
 		//True (default): the file will be replaced with brand new markup, and all existing data will be lost. Use this option to create a brand new report
 		//False: existing data will remain, new tests will be appended to the existing report. If the the supplied path does not exist, a new file will be created.
-		extent = new ExtentReports("D:\\Users\\ABhavle\\eclipse-workspace\\BatteryBankAPI\\src\\test\\java\\report\\SeleniumAutomation.html");
+		extent = new ExtentReports("D:\\AjitAltimetrik\\battery\\inventorymanagement\\src\\test\\java\\com\\altimetrik\\inventoryManagement\\report\\SeleniumAutomation.html");
 		//extent.addSystemInfo("Environment","Environment Name")
 		extent
 		.addSystemInfo("Host Name", "API Automation")
@@ -61,7 +61,7 @@ public class BaseTest {
 		//loading the external xml file (i.e., extent-config.xml) which was placed under the base directory
 		//You could find the xml file below. Create xml file in your project and copy past the code mentioned below
 
-		extent.loadConfig(new File("D:\\Users\\ABhavle\\eclipse-workspace\\BatteryBankAPI\\src\\test\\java\\report\\extent-config.xml"));
+		extent.loadConfig(new File("D:\\AjitAltimetrik\\battery\\inventorymanagement\\src\\test\\java\\com\\altimetrik\\inventoryManagement\\report\\extent-config.xml"));
 
 	}
 	@BeforeMethod
