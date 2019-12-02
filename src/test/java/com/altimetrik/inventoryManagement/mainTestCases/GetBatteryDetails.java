@@ -24,6 +24,14 @@ public class GetBatteryDetails extends BaseTest {
 				.then().assertThat().statusCode(400);
 				
 			}
+			@Test()
+			public void getBatteryDetailsBySpecialChar() {
+				
+				given().accept("json").contentType("application/json")
+				.when().get("/battery?batteryId=$#")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
+				.then().assertThat().statusCode(404);
+				
+			}
 	/*@Test
 	public void verifyTopLevelURL() {
 		given().when().get("/garage").then()
