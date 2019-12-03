@@ -1,6 +1,5 @@
 package com.altimetrik.inventoryManagement.baseClass;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -15,7 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.altimetrik.inventoryManagement.apiUtils.ApiUtils;
-import com.altimetrik.inventoryManagement.commonMethods.TestHelper;
+import com.altimetrik.inventoryManagement.pojo.TestHelper;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
