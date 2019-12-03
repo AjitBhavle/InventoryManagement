@@ -1,4 +1,4 @@
-package com.altimetrik.inventoryManagement.commonMethods;
+package com.altimetrik.inventoryManagement.pojo;
 
 import org.testng.Assert;
 
