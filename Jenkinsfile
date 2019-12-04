@@ -28,5 +28,23 @@ pipeline {
                 }
             }
         }
+        stage ('docker build') {
+            steps {
+                bat 'docker build -f Dockerfile -t banerjeeindranil854/docker-inventorymanagement .'
+            }
+        }
+        stage ('docker push') {
+            steps {
+            		withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPassword')]) {
+                    bat "docker login -u banerjeeindranil854 -p ${dockerHubPassword}"
+					}
+                bat 'docker push banerjeeindranil854/docker-inventorymanagement'
+            }
+        }
+        stage ('docker run') {
+            steps {
+                bat 'docker run -p 8082:8082 -d banerjeeindranil854/docker-inventorymanagement'
+            }
+        }
     }
 }
