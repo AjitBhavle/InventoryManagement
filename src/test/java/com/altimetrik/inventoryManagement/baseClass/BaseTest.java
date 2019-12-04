@@ -1,5 +1,8 @@
 package com.altimetrik.inventoryManagement.baseClass;
 
+import static com.jayway.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -12,38 +15,43 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-import com.altimetrik.inventoryManagement.apiUtils.ApiUtils;
-import com.altimetrik.inventoryManagement.pojo.TestHelper;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import com.altimetrik.inventoryManagement.apiUtils.PropertiesManager;
+import com.jayway.restassured.RestAssured;
 
-public class BaseTest {
+public class BaseTest{
 
 	public Response res = null; //Response
 	public JsonPath jp = null; //JsonPath
 	public static ExtentReports extent;
 	public static ExtentTest logger;
 
-	//Instantiate a Helper Test Methods (testUtils) Object
-	TestHelper testUtils = new TestHelper();
-	
+	//Instantiate a Helper Test Methods (testUtils) Object	
 	@BeforeSuite
-	public void setupBaseUrl() {
-		
-		 /*String baseHost = System.getProperty("server.host");
+	public void setupBaseUrl() throws IOException {
+
+		/*String baseHost = System.getProperty("server.host");
 	        if(baseHost==null){
 	            baseHost = "http://localhost";
 	        }
 	        RestAssured.baseURI = baseHost;*/
-		ApiUtils.setBaseURI(); //Setup Base URI
+		PropertiesManager.initializeProperties();
+		
+		RestAssured.baseURI=PropertiesManager.getProperty("baseURI");
+		
+		System.out.println("This is URL:"+RestAssured.baseURI);
+
+
+		 //Setup Base URI
 
 	}
-	
+
 	@BeforeTest
 	public void startReport(){
 		//ExtentReports(String filePath,Boolean replaceExisting) 
@@ -104,7 +112,8 @@ public class BaseTest {
 
 	@AfterSuite
 	public void afterClass() {
-		ApiUtils.resetBaseURI();
+		
+		RestAssured.baseURI=null;
 	}
 
 

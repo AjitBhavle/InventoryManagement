@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-03T12:36:41 IST" name="BatteryBankAPI" finished-at="2019-12-03T12:36:45 IST" duration-ms="3722">
+  <suite started-at="2019-12-04T15:52:05 IST" name="Default suite" finished-at="2019-12-04T15:52:08 IST" duration-ms="3007">
     <groups>
     </groups>
-    <test started-at="2019-12-03T12:36:41 IST" name="BatteryBankAPI" finished-at="2019-12-03T12:36:45 IST" duration-ms="3722">
+    <test started-at="2019-12-04T15:52:05 IST" name="Default test" finished-at="2019-12-04T15:52:08 IST" duration-ms="3007">
       <class name="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails">
-        <test-method is-config="true" signature="setupBaseUrl()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:40 IST" name="setupBaseUrl" finished-at="2019-12-03T12:36:41 IST" duration-ms="498" status="PASS">
+        <test-method is-config="true" signature="setupBaseUrl()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:04 IST" name="setupBaseUrl" finished-at="2019-12-04T15:52:05 IST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBaseUrl -->
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:41 IST" name="startReport" finished-at="2019-12-03T12:36:41 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:05 IST" name="startReport" finished-at="2019-12-04T15:52:05 IST" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:41 IST" name="testLogger" finished-at="2019-12-03T12:36:41 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:05 IST" name="testLogger" finished-at="2019-12-04T15:52:05 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,26 +26,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogger -->
-        <test-method signature="getBatteryDetailsByInvalidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:41 IST" name="getBatteryDetailsByInvalidId" finished-at="2019-12-03T12:36:43 IST" duration-ms="1725" status="PASS">
+        <test-method signature="getBatteryDetailsByInvalidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:05 IST" name="getBatteryDetailsByInvalidId" finished-at="2019-12-04T15:52:06 IST" duration-ms="1297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBatteryDetailsByInvalidId -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:43 IST" name="getResult" finished-at="2019-12-03T12:36:43 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:06 IST" name="getResult" finished-at="2019-12-04T15:52:06 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getBatteryDetailsByInvalidId status=SUCCESS method=GetBatteryDetails.getBatteryDetailsByInvalidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068] output={null}]]]>
+                <![CDATA[[TestResult name=getBatteryDetailsByInvalidId status=SUCCESS method=GetBatteryDetails.getBatteryDetailsByInvalidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method signature="getBatteryDetailsBySpecialChar()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:43 IST" name="getBatteryDetailsBySpecialChar" finished-at="2019-12-03T12:36:43 IST" duration-ms="582" status="PASS">
+        <test-method signature="getBatteryDetailsBySpecialChar()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:06 IST" name="getBatteryDetailsBySpecialChar" finished-at="2019-12-04T15:52:07 IST" duration-ms="540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBatteryDetailsBySpecialChar -->
-        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:43 IST" name="testLogger" finished-at="2019-12-03T12:36:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:06 IST" name="testLogger" finished-at="2019-12-04T15:52:06 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,18 +56,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogger -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:43 IST" name="getResult" finished-at="2019-12-03T12:36:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:07 IST" name="getResult" finished-at="2019-12-04T15:52:07 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getBatteryDetailsBySpecialChar status=SUCCESS method=GetBatteryDetails.getBatteryDetailsBySpecialChar()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068] output={null}]]]>
+                <![CDATA[[TestResult name=getBatteryDetailsBySpecialChar status=SUCCESS method=GetBatteryDetails.getBatteryDetailsBySpecialChar()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:43 IST" name="testLogger" finished-at="2019-12-03T12:36:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="testLogger(java.lang.reflect.Method)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:07 IST" name="testLogger" finished-at="2019-12-04T15:52:07 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,30 +78,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogger -->
-        <test-method signature="getBatteryDetailsByValidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:43 IST" name="getBatteryDetailsByValidId" finished-at="2019-12-03T12:36:44 IST" duration-ms="956" status="PASS">
+        <test-method signature="getBatteryDetailsByValidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:07 IST" name="getBatteryDetailsByValidId" finished-at="2019-12-04T15:52:08 IST" duration-ms="805" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBatteryDetailsByValidId -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:44 IST" name="getResult" finished-at="2019-12-03T12:36:44 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:08 IST" name="getResult" finished-at="2019-12-04T15:52:08 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getBatteryDetailsByValidId status=SUCCESS method=GetBatteryDetails.getBatteryDetailsByValidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068] output={null}]]]>
+                <![CDATA[[TestResult name=getBatteryDetailsByValidId status=SUCCESS method=GetBatteryDetails.getBatteryDetailsByValidId()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:44 IST" name="endReport" finished-at="2019-12-03T12:36:45 IST" duration-ms="306" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:08 IST" name="endReport" finished-at="2019-12-04T15:52:08 IST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@68999068]" started-at="2019-12-03T12:36:45 IST" name="afterClass" finished-at="2019-12-03T12:36:45 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails@708f5957]" started-at="2019-12-04T15:52:08 IST" name="afterClass" finished-at="2019-12-04T15:52:08 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails -->
-    </test> <!-- BatteryBankAPI -->
-  </suite> <!-- BatteryBankAPI -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

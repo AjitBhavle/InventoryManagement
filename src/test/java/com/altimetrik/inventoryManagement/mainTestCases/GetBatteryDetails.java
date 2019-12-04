@@ -7,31 +7,31 @@ import org.testng.annotations.Test;
 import com.altimetrik.inventoryManagement.baseClass.BaseTest;
 
 public class GetBatteryDetails extends BaseTest {
-			
-			@Test()
-			public void getBatteryDetailsByValidId() {
-				
-				given().accept("json").contentType("application/json")
-				.when().get("/battery?batteryId=1")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
-				.then().assertThat().body("betteryModel", equalTo("amaron")).statusCode(200);
-				
-			}
-			@Test()
-			public void getBatteryDetailsByInvalidId() {
-				
-				given().accept("json").contentType("application/json")
-				.when().get("/battery?batteryId=2")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
-				.then().assertThat().statusCode(404);
-				
-			}
-			@Test()
-			public void getBatteryDetailsBySpecialChar() {
-				
-				given().accept("json").contentType("application/json")
-				.when().get("/battery?batteryId=$#")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
-				.then().assertThat().statusCode(404);
-				
-			}
+
+	@Test()
+	public void getBatteryDetailsByValidId() {
+
+		given().accept("json").contentType("application/json")
+		.when().get("/battery?batteryId=1")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
+		.then().assertThat().body("betteryModel", equalTo("amaron")).statusCode(200);
+
+	}
+	@Test()
+	public void getBatteryDetailsByInvalidId() {
+
+		given().accept("json").contentType("application/json")
+		.when().get("/battery?batteryId=2")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
+		.then().assertThat().statusCode(404);
+		
+	}
+	@Test()
+	public void getBatteryDetailsBySpecialChar() {
+
+		given().accept("json").contentType("application/json")
+		.when().get("/battery?batteryId=$#")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
+		.then().assertThat().statusCode(404);
+
+	}
 	/*@Test
 	public void verifyTopLevelURL() {
 		given().when().get("/garage").then()
