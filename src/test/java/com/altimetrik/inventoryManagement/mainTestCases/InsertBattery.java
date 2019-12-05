@@ -15,7 +15,7 @@ public class InsertBattery extends InsertBatteryPojo {
 	public void aCarGoesIntoTheGarage() {
 		
 
-		String test="123";
+		String test="1234";
 		given().accept("json").contentType("application/json")
 		.body(test)
 		.when().post("/garage/slots").then()
