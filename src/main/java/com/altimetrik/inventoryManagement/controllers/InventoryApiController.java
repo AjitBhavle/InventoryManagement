@@ -58,8 +58,13 @@ public class InventoryApiController implements InventoryApi {
 
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<Inventory>(objectMapper.readValue(restTemplate.exchange(
-                        "http://inventorymanagement.mocklab.io/inventory", HttpMethod.PUT, entity, String.class).getBody(), Inventory.class), HttpStatus.NOT_IMPLEMENTED);
+				/*
+				 * return new
+				 * ResponseEntity<Inventory>(objectMapper.readValue(restTemplate.exchange(
+				 * "http://inventorymanagement.mocklab.io/inventory", HttpMethod.PUT, entity,
+				 * String.class).getBody(), Inventory.class), HttpStatus.NOT_IMPLEMENTED);
+				 */ 
+            	return new ResponseEntity<Inventory>(objectMapper.readValue("{  \"transactionByUser\" : \"transactionByUser\",  \"batteryId\" : \"batteryId\",  \"transactionRequestId\" : \"transactionRequestId\",  \"batteryModel\" : \"batteryModel\",  \"transactionByVendor\" : \"transactionByVendor\",  \"inventoryStatus\" : \"locked\",  \"inventoryId\" : 0,  \"transactionDate\" : \"transactionDate\"}", Inventory.class), HttpStatus.OK);	
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<Inventory>(HttpStatus.INTERNAL_SERVER_ERROR);

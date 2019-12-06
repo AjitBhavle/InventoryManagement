@@ -61,8 +61,13 @@ public class BulkSearchApiController implements BulkSearchApi {
 
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<List<ItemInventoryDetails>>(objectMapper.readValue(restTemplate.exchange(
-                        "http://inventorymanagement.mocklab.io/bulkSearch", HttpMethod.POST, entity, String.class).getBody(), List.class), HttpStatus.NOT_IMPLEMENTED);
+				/*
+				 * return new ResponseEntity<List<ItemInventoryDetails>>(objectMapper.readValue(
+				 * restTemplate.exchange( "http://inventorymanagement.mocklab.io/bulkSearch",
+				 * HttpMethod.POST, entity, String.class).getBody(), List.class),
+				 * HttpStatus.NOT_IMPLEMENTED);
+				 */
+            	return new ResponseEntity<List<ItemInventoryDetails>>(objectMapper.readValue("[ {  \"souldCount\" : 2,  \"avaliableCount\" : 5,  \"batteryId\" : 6,  \"batteryModel\" : \"batteryModel\",  \"batteryQuantity\" : 5,  \"vendorId\" : 0,  \"batteryPrice\" : 1}, {  \"souldCount\" : 2,  \"avaliableCount\" : 5,  \"batteryId\" : 6,  \"batteryModel\" : \"batteryModel\",  \"batteryQuantity\" : 5,  \"vendorId\" : 0,  \"batteryPrice\" : 1} ]", List.class), HttpStatus.OK);	
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<List<ItemInventoryDetails>>(HttpStatus.INTERNAL_SERVER_ERROR);
