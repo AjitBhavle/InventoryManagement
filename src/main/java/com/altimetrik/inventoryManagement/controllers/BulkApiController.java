@@ -60,8 +60,13 @@ public class BulkApiController implements BulkApi {
 
         if (accept != null && accept.contains("application/json")) {
             try {
-                return new ResponseEntity<List<Battery>>(objectMapper.readValue(restTemplate.exchange(
-                        "http://inventorymanagement.mocklab.io/bulk", HttpMethod.POST, entity, String.class).getBody(), List.class), HttpStatus.NOT_IMPLEMENTED);
+				/*
+				 * return new
+				 * ResponseEntity<List<Battery>>(objectMapper.readValue(restTemplate.exchange(
+				 * "http://inventorymanagement.mocklab.io/bulk", HttpMethod.POST, entity,
+				 * String.class).getBody(), List.class), HttpStatus.OK);
+				 */
+            	return new ResponseEntity<List<Battery>>(objectMapper.readValue("[ {  \"batteryChargeDate\" : \"batteryChargeDate\",  \"batteryId\" : 0,  \"batteryCost\" : 5,  \"batteryManfucturingDate\" : \"batteryManfucturingDate\",  \"batteryCurrentLocation\" : \"batteryCurrentLocation\",  \"vendorId\" : \"vendorId\",  \"batteryLastUpdateDate\" : \"batteryLastUpdateDate\",  \"batteryWeight\" : 1,  \"vehicleModelName\" : \"vehicleModelName\",  \"betteryModel\" : \"betteryModel\",  \"batteryExpirationDate\" : \"batteryExpirationDate\",  \"batteryTypeId\" : 6,  \"vehicleBrand\" : \"vehicleBrand\",  \"batteryCreateDate\" : \"batteryCreateDate\",  \"batteryStatus\" : \"charged\",  \"inventoryId\" : \"inventoryId\",  \"batteryCapacity\" : \"batteryCapacity\",  \"batteryBrand\" : \"batteryBrand\",  \"batteryLastChargeDate\" : \"batteryLastChargeDate\",  \"voltageOutput\" : \"voltageOutput\"}, {  \"batteryChargeDate\" : \"batteryChargeDate\",  \"batteryId\" : 0,  \"batteryCost\" : 5,  \"batteryManfucturingDate\" : \"batteryManfucturingDate\",  \"batteryCurrentLocation\" : \"batteryCurrentLocation\",  \"vendorId\" : \"vendorId\",  \"batteryLastUpdateDate\" : \"batteryLastUpdateDate\",  \"batteryWeight\" : 1,  \"vehicleModelName\" : \"vehicleModelName\",  \"betteryModel\" : \"betteryModel\",  \"batteryExpirationDate\" : \"batteryExpirationDate\",  \"batteryTypeId\" : 6,  \"vehicleBrand\" : \"vehicleBrand\",  \"batteryCreateDate\" : \"batteryCreateDate\",  \"batteryStatus\" : \"charged\",  \"inventoryId\" : \"inventoryId\",  \"batteryCapacity\" : \"batteryCapacity\",  \"batteryBrand\" : \"batteryBrand\",  \"batteryLastChargeDate\" : \"batteryLastChargeDate\",  \"voltageOutput\" : \"voltageOutput\"} ]", List.class), HttpStatus.OK);
             } catch (IOException e) {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<List<Battery>>(HttpStatus.INTERNAL_SERVER_ERROR);
