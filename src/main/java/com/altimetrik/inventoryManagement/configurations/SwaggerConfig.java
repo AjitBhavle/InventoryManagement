@@ -16,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 	public class SwaggerConfig {
 	ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("Battery Bank Billing System")
-            .description("Battery Bank Billing System")
+            .title("inventory System")
+            .description("inventory System")
             .license("altimatrik")
             .licenseUrl("http://altimetrik.batterybank.com/license")
             .termsOfServiceUrl("")

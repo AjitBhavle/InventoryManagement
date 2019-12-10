@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>D:\Users\ABhavle\AppData\Local\Temp\testng-eclipse-1197178471\testng-customsuite.xml</span>
+                    <span>D:\Users\ABhavle\AppData\Local\Temp\testng-eclipse-1517732303\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,31 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails" class="method navigator-link" hash-for-method="getBatteryDetailsByInvalidId">getBatteryDetailsByInvalidId</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.altimetrik.inventoryManagement.mainTestCases.InsertBattery" class="method navigator-link" hash-for-method="postInsertBattery">postInsertBattery</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails" class="method navigator-link" hash-for-method="getBatteryDetailsBySpecialChar">getBatteryDetailsBySpecialChar</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails" class="method navigator-link" hash-for-method="getBatteryDetailsByValidId">getBatteryDetailsByValidId</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,39 +117,214 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.altimetrik.inventoryManagement.mainTestCases.InsertBattery</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getBatteryDetailsByInvalidId">
-                  </a> <!-- getBatteryDetailsByInvalidId -->
-                  <span class="method-name">getBatteryDetailsByInvalidId</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getBatteryDetailsBySpecialChar">
-                  </a> <!-- getBatteryDetailsBySpecialChar -->
-                  <span class="method-name">getBatteryDetailsBySpecialChar</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getBatteryDetailsByValidId">
-                  </a> <!-- getBatteryDetailsByValidId -->
-                  <span class="method-name">getBatteryDetailsByValidId</span>
+                  <a name="postInsertBattery">
+                  </a> <!-- postInsertBattery -->
+                  <span class="method-name">postInsertBattery</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+XML path betteryModel doesn&apos;t match.
+Expected: amaron
+  Actual: var _ezaq = {&quot;ad_cache_level&quot;:0,&quot;ad_location_ids&quot;:&quot;&quot;,&quot;ad_transform_level&quot;:0,&quot;adx_ad_count&quot;:0,&quot;bidder_version&quot;:3,&quot;city&quot;:&quot;Mumbai&quot;,&quot;country&quot;:&quot;IN&quot;,&quot;days_since_last_visit&quot;:-1,&quot;display_ad_count&quot;:0,&quot;domain_id&quot;:133674,&quot;ds_adsize_opt_id&quot;:-1,&quot;engaged_time_visit&quot;:0,&quot;ezcache_level&quot;:1,&quot;forensiq_score&quot;:-1,&quot;form_factor_id&quot;:1,&quot;framework_id&quot;:1,&quot;has_bad_image&quot;:0,&quot;has_bad_words&quot;:0,&quot;iab_category&quot;:&quot;&quot;,&quot;is_from_recommended_pages&quot;:false,&quot;is_return_visitor&quot;:false,&quot;is_sitespeed&quot;:0,&quot;last_page_load&quot;:&quot;&quot;,&quot;last_pageview_id&quot;:&quot;&quot;,&quot;lt_cache_level&quot;:0,&quot;max_ads&quot;:0,&quot;metro_code&quot;:0,&quot;page_ad_positions&quot;:&quot;&quot;,&quot;page_view_count&quot;:0,&quot;page_view_id&quot;:&quot;29c2598f-6f2e-48d6-6eec-b02a92bfb868&quot;,&quot;position_selection_id&quot;:0,&quot;postal_code&quot;:&quot;400070&quot;,&quot;pv_event_count&quot;:0,&quot;response_time_orig&quot;:797,&quot;serverid&quot;:&quot;13.127.196.192:6262&quot;,&quot;state&quot;:&quot;MH&quot;,&quot;sub_page_ad_positions&quot;:&quot;&quot;,&quot;t_epoch&quot;:1575982242,&quot;template_id&quot;:0,&quot;time_on_site_visit&quot;:0,&quot;url&quot;:&quot;http://dummy.restapiexample.com/api/v1/battery&quot;,&quot;user_id&quot;:0,&quot;word_count&quot;:0,&quot;worst_bad_word_level&quot;:0};var _ezim_d = null;var _ezat = {&quot;domain_id&quot;:133674,&quot;form_factor_id&quot;:1,&quot;framework_id&quot;:1,&quot;pageview_date&quot;:&quot;2019-12-10&quot;,&quot;pageview_id&quot;:&quot;29c2598f-6f2e-48d6-6eec-b02a92bfb868&quot;,&quot;template_id&quot;:0,&quot;url&quot;:&quot;http://dummy.restapiexample.com/api/v1/battery&quot;,&quot;visit_uuid&quot;:&quot;35ddf9d2-8573-49fc-7de6-fdfd14af5ad7&quot;};__ez.queue.addFile(&apos;banger.js&apos;, &apos;/porpoiseant/banger.js?cb=188-3&amp;bv=81&amp;v=30&amp;PageSpeed=off&apos;, true, [], true, false, false, true);var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck={};__ez.template={};__ez.template.isOrig=false;__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent(&quot;on&quot;+t,n):e[&quot;on&quot;+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent(&quot;on&quot;+t,n):delete e[&quot;on&quot;+t]};__ez.ck.get=function(e,n){null!==n&amp;&amp;(e=e+&quot;_&quot;+n);for(var o=e+&quot;=&quot;,t=decodeURIComponent(document.cookie).split(&quot;;&quot;),i=0;i&lt;t.length;i++){for(var c=t[i];&quot; &quot;===c.charAt(0);)c=c.substring(1);if(0===c.indexOf(o))return c.substring(o.length,c.length)}return&quot;&quot;},__ez.ck.setByCat=function(e,n){if(-1===e.indexOf(&quot;path=&quot;)&amp;&amp;(e+=&quot;; path=/&quot;),&quot;undefined&quot;!=typeof cmpIsOn){if(null!=n){var o=__ez.ck.get(&quot;ezCMPCookieConsent&quot;,null);-1!==(o=o.substring(1,o.length)).indexOf(n+&quot;=1&quot;)?document.cookie=e:&quot;&quot;===o&amp;&amp;&quot;undefined&quot;!=typeof cmpCookies&amp;&amp;(void 0===cmpCookies[n]&amp;&amp;(cmpCookies[n]=[]),cmpCookies[n].push(e))}}else document.cookie=e};__ez.queue=function(){var e=0,i=0,n=[],t=!1,r=[],o=[],s=!0,a={func:function(e,i,t,r,o,s,a){var l=this;this.name=e,this.funcName=i,this.parameters=null===t?null:t instanceof Array?t:[t],this.isBlock=r,this.blockedBy=o,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.isTimeDelay=!1,this.process=function(){d(&quot;... func = &quot;+e),l.isInitialized=!0,l.isComplete=!0,d(&quot;... func.apply: &quot;+e);var i=l.funcName.split(&quot;.&quot;),t=null;i.length&gt;3||(t=3===i.length?window[i[0]][i[1]][i[2]]:2===i.length?window[i[0]][i[1]]:window[l.funcName]),null!=t&amp;&amp;t.apply(null,this.parameters),!0===l.deleteWhenComplete&amp;&amp;delete n[e],!0===l.isBlock&amp;&amp;(d(&quot;----- F&apos;D: &quot;+l.name),f())}},file:function(e,i,n,t,r,o,s){var a=this;this.name=e,this.path=i,this.async=r,this.defer=o,this.isBlock=n,this.blockedBy=t,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.isTimeDelay=!1,this.process=function(){a.isInitialized=!0,d(&quot;... file = &quot;+e);var n=document.createElement(&quot;script&quot;);n.src=i,!0===r?n.async=!0:!0===o&amp;&amp;(n.defer=!0),n.onerror=function(){d(&quot;----- ERR&apos;D: &quot;+a.name),a.isError=!0,!0===a.isBlock&amp;&amp;f()},n.onreadystatechange=n.onload=function(){var e=n.readyState;d(&quot;----- F&apos;D: &quot;+a.name),e&amp;&amp;!/loaded|complete/.test(e)||(a.isComplete=!0,!0===a.isBlock&amp;&amp;f())},document.getElementsByTagName(&quot;head&quot;)[0].appendChild(n)}}};function l(e){!0!==c(e)&amp;&amp;0!=s&amp;&amp;e.process()}function c(e){if(!0===e.isTimeDelay&amp;&amp;!1===t)return d(e.name+&quot; blocked = TIME DELAY!&quot;),!0;if(e.blockedBy instanceof Array)for(var i=0;i&lt;e.blockedBy.length;i++){var r=e.blockedBy[i];if(!1===n.hasOwnProperty(r))return d(e.name+&quot; blocked = &quot;+r),!0;if(!0===e.proceedIfError&amp;&amp;!0===n[r].isError)return!1;if(!1===n[r].isComplete)return d(e.name+&quot; blocked = &quot;+r),!0}return!1}function d(e){var i=window.location.href,n=new RegExp(&quot;[?&amp;]ezq=([^&amp;#]*)&quot;,&quot;i&quot;).exec(i);&quot;1&quot;===(n?n[1]:null)&amp;&amp;console.debug(e)}function f(){++e&gt;200||(d(&quot;let&apos;s go&quot;),u(r),u(o))}function u(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var n=e[i];!0===n.isComplete||c(n)||!0===n.isInitialized||!0===n.isError?!0===n.isError?d(n.name+&quot;: error&quot;):!0===n.isComplete?d(n.name+&quot;: complete already&quot;):!0===n.isInitialized&amp;&amp;d(n.name+&quot;: initialized already&quot;):n.process()}}return window.addEventListener(&quot;load&quot;,function(){setTimeout(function(){t=!0,d(&quot;TDELAY -----&quot;),f()},5e3)},!1),{addFile:function(e,i,t,s,c,d,f,u){var h=new a.file(e,i,t,s,c,d,f);!0===u?r[e]=h:o[e]=h,n[e]=h,l(h)},addDelayFile:function(e,i){var t=new a.file(e,i,!1,[],!1,!1,!0);t.isTimeDelay=!0,d(e+&quot; ...  FILE! TDELAY&quot;),o[e]=t,n[e]=t,l(t)},addFunc:function(e,t,s,c,d,f,u,h,m){!0===f&amp;&amp;(e=e+&quot;_&quot;+i++);var p=new a.func(e,t,s,c,d,u,h);!0===m?r[e]=p:o[e]=p,n[e]=p,l(p)},addDelayFunc:function(e,i,t){var r=new a.func(e,i,t,!1,[],!0,!0);r.isTimeDelay=!0,d(e+&quot; ...  FUNCTION! TDELAY&quot;),o[e]=r,n[e]=r,l(r)},items:n,processAll:f,setallowLoad:function(e){s=e}}}();__ez.script.add=function(e){var t=document.createElement(&quot;script&quot;);t.src=e,t.async=!0,t.type=&quot;text/javascript&quot;,document.getElementsByTagName(&quot;head&quot;)[0].appendChild(t)};__ez.dot={};var __ezDotData=function(e,t){&quot;string&quot;!=typeof e&amp;&amp;2==e.length&amp;&amp;(t=e[1],e=e[0]),this.name=e,this.val=t};__ez.dot.b64={_keyStr:&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;,encode:function(e){var t,r,n,o,i,d,a,_=&quot;&quot;,f=0;for(e=Base64._utf8_encode(e);f&lt;e.length;)o=(t=e.charCodeAt(f++))&gt;&gt;2,i=(3&amp;t)&lt;&lt;4|(r=e.charCodeAt(f++))&gt;&gt;4,d=(15&amp;r)&lt;&lt;2|(n=e.charCodeAt(f++))&gt;&gt;6,a=63&amp;n,isNaN(r)?d=a=64:isNaN(n)&amp;&amp;(a=64),_=_+this._keyStr.charAt(o)+this._keyStr.charAt(i)+this._keyStr.charAt(d)+this._keyStr.charAt(a);return _},decode:function(e){var t,r,n,o,i,d,a=&quot;&quot;,_=0;for(e=e.replace(/[^A-Za-z0-9+/=]/g,&quot;&quot;);_&lt;e.length;)t=this._keyStr.indexOf(e.charAt(_++))&lt;&lt;2|(o=this._keyStr.indexOf(e.charAt(_++)))&gt;&gt;4,r=(15&amp;o)&lt;&lt;4|(i=this._keyStr.indexOf(e.charAt(_++)))&gt;&gt;2,n=(3&amp;i)&lt;&lt;6|(d=this._keyStr.indexOf(e.charAt(_++))),a+=String.fromCharCode(t),64!=i&amp;&amp;(a+=String.fromCharCode(r)),64!=d&amp;&amp;(a+=String.fromCharCode(n));return a=Base64._utf8_decode(a)},_utf8_encode:function(e){e=e.replace(/rn/g,&quot;n&quot;);for(var t=&quot;&quot;,r=0;r&lt;e.length;r++){var n=e.charCodeAt(r);n&lt;128?t+=String.fromCharCode(n):(127&lt;n&amp;&amp;n&lt;2048?t+=String.fromCharCode(n&gt;&gt;6|192):(t+=String.fromCharCode(n&gt;&gt;12|224),t+=String.fromCharCode(n&gt;&gt;6&amp;63|128)),t+=String.fromCharCode(63&amp;n|128))}return t},_utf8_decode:function(e){for(var t=&quot;&quot;,r=0,n=c1=c2=0;r&lt;e.length;)(n=e.charCodeAt(r))&lt;128?(t+=String.fromCharCode(n),r++):191&lt;n&amp;&amp;n&lt;224?(c2=e.charCodeAt(r+1),t+=String.fromCharCode((31&amp;n)&lt;&lt;6|63&amp;c2),r+=2):(c2=e.charCodeAt(r+1),c3=e.charCodeAt(r+2),t+=String.fromCharCode((15&amp;n)&lt;&lt;12|(63&amp;c2)&lt;&lt;6|63&amp;c3),r+=3);return t}},__ez.dot.dataToStr=function(e){if(void 0===e)return[];try{for(var t in e)e[t].val=e[t].val+&quot;&quot;}catch(e){}return e},__ez.dot.getCC=function(){var e=&quot;XX&quot;;return&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;country&quot;)&amp;&amp;(e=_ezaq.country),e},__ez.dot.getDID=function(){var e=&quot;0&quot;;return&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;domain_id&quot;)&amp;&amp;(e=_ezaq.domain_id.toString()),e},__ez.dot.getEpoch=function(e){return&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;t_epoch&quot;)&amp;&amp;(e=_ezaq.t_epoch),e},__ez.dot.getPageviewId=function(){var e=&quot;&quot;;return&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;page_view_id&quot;)&amp;&amp;(e=_ezaq.page_view_id),e},__ez.dot.getURL=function(e){return(&quot;undefined&quot;!=typeof ezJsu&amp;&amp;1==ezJsu||&quot;undefined&quot;!=typeof _ez_sa&amp;&amp;1==_ez_sa||&quot;undefined&quot;!=typeof isAmp&amp;&amp;!0===isAmp||&quot;undefined&quot;!=typeof ezWp&amp;&amp;!0===ezWp)&amp;&amp;(e=&quot;//g.ezoic.net&quot;+e),e},__ez.dot.isValid=function(e){for(var t=0;t&lt;e.length;t++)if(e[t]instanceof __ezDotData==!1)return console.error(&quot;Invalid data. &quot;,e[t]),!1;return!0},__ez.dot.isDefined=function(){for(var e=0;e&lt;arguments.length;e++)if(null==arguments[e])return console.error(&quot;Argument not defined. &quot;,arguments),!1;return!0},__ez.dot.isAnyDefined=function(){for(var e=!1,t=0;t&lt;arguments.length;t++)null!=arguments[t]&amp;&amp;(e=!0);return 0==e&amp;&amp;console.error(&quot;isAnyDefined Arguments not defined. &quot;,arguments),e},__ez.dot.getSlotIID=function(e){var t=&quot;0&quot;;try{var r=__ez.dot.getTargetingMap(e);if(-1===__ez.dot.getElementId(e).indexOf(&quot;div-gpt-ad&quot;))return t;if(void 0!==r)for(var n in r)if(-1!==n.indexOf(&quot;iid&quot;)&amp;&amp;void 0!==r[n][0]){t=r[n][0];break}}catch(e){}return t},__ez.dot.getElementId=function(e){return void 0!==e.ElementId?e.ElementId:e.getSlotElementId()},__ez.dot.getAdUnitPath=function(e){return void 0!==e.AdUnitPath?e.AdUnitPath:e.getAdUnitPath()},__ez.dot.getSizes=function(e){return void 0!==e.Sizes?e.Sizes:e.getSizes()},__ez.dot.getTargeting=function(e,t){return void 0!==e.Targeting?e.Targeting[t]:e.getTargeting(t)[0]},__ez.dot.getTargetingMap=function(e){return void 0!==e.Targeting?e.Targeting:e.getTargetingMap()},__ez.dot.getAdUnit=function(e){return!0===__ez.template.isOrig?__ez.dot.getAdUnitPath(e).split(&quot;/&quot;).pop()+&quot;|~ez~|&quot;+__ez.dot.getElementId(e):__ez.dot.getElementId(e)};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&amp;&amp;__ez.dot.isValid(c)&amp;&amp;a.push({type:&quot;pageview&quot;,pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&amp;&amp;&quot;prerender&quot;===document.visibilityState||(__ez.dot.isDefined(a)&amp;&amp;a.length&gt;0&amp;&amp;((new Image).src=__ez.dot.getURL(b)+&quot;?orig=&quot;+(!0===__ez.template.isOrig?1:0)+&quot;&amp;ds=&quot;+btoa(JSON.stringify(a))),a=[])}var a=[],b=&quot;/detroitchicago/greenoaks.gif&quot;;return{Add:d,AddAndFire:c,Fire:e}}();__ez.pel=function(){var u=[],i=&quot;/porpoiseant/army.gif&quot;;function t(e,i,t,_,d,o,n){if(__ez.dot.isDefined(e)&amp;&amp;0!=__ez.dot.isAnyDefined(e.getSlotElementId,e.ElementId)){var r=parseInt(__ez.dot.getTargeting(e,&quot;ap&quot;)),a=__ez.dot.getSlotIID(e),s=__ez.dot.getAdUnit(e),p=parseInt(__ez.dot.getTargeting(e,&quot;compid&quot;)),z=0,f=0,g=function(e){if(&quot;undefined&quot;==typeof _ezim_d)return!1;var i=__ez.dot.getAdUnitPath(e).split(&quot;/&quot;).pop();if(&quot;object&quot;==typeof _ezim_d&amp;&amp;_ezim_d.hasOwnProperty(i))return _ezim_d[i];for(var t in _ezim_d)if(t.split(&quot;/&quot;).pop()===i)return _ezim_d[t];return!1}(e);&quot;object&quot;==typeof g&amp;&amp;(void 0!==g.creative_id&amp;&amp;(f=g.creative_id),void 0!==g.line_item_id&amp;&amp;(z=g.line_item_id)),__ez.dot.isDefined(a,s)&amp;&amp;__ez.dot.isValid(i)&amp;&amp;u.push({type:&quot;impression&quot;,impression_id:a,domain_id:__ez.dot.getDID(),unit:s,t_epoch:__ez.dot.getEpoch(0),revenue:t,est_revenue:_,ad_position:r,ad_size:&quot;&quot;,bid_floor_filled:d,bid_floor_prev:o,stat_source_id:n,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:p,line_item_id:z,creative_id:f,data:__ez.dot.dataToStr(i)})}}function _(){if(void 0===document.visibilityState||&quot;prerender&quot;!==document.visibilityState){if(__ez.dot.isDefined(u)&amp;&amp;0&lt;u.length){var e=__ez.dot.getURL(i)+&quot;?orig=&quot;+(!0===__ez.template.isOrig?1:0)+&quot;&amp;sts=&quot;+btoa(JSON.stringify(u));void 0!==window.isAmp&amp;&amp;isAmp&amp;&amp;void 0!==window._ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;domain_id&quot;)&amp;&amp;(e+=&quot;&amp;visit_uuid=&quot;+_ezaq.visit_uuid),(new Image).src=e}u=[]}}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),_()},AddById:function(e,i){var t=e.split(&quot;/&quot;);if(__ez.dot.isDefined(e)&amp;&amp;3===t.length&amp;&amp;__ez.dot.isValid(i)){var _=t[0],d=t[2];u.push({type:&quot;impression&quot;,impression_id:d,domain_id:__ez.dot.getDID(),unit:_,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(i)})}},Fire:_,GetPixels:function(){return u}}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl=&quot;/ezoic/e.gif&quot;,(&quot;undefined&quot;!=typeof ezJsu&amp;&amp;!0===ezJsu||&quot;undefined&quot;!=typeof _ez_sa&amp;&amp;!0===_ez_sa||void 0!==window.isAmp&amp;&amp;!0===isAmp||&quot;undefined&quot;!=typeof ezWp&amp;&amp;!0===ezWp)&amp;&amp;(this.pixelUrl=&quot;//g.ezoic.net&quot;+this.pixelUrl),this.tEpoch=0,&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;t_epoch&quot;)&amp;&amp;(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(e,i){this.name=e,this.val=i};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(e,i){this.AddImpPixel(e,i,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(e,i){this.AddPVPixel(e,i),this.FirePixels()},AddImpPixel:function(e,i,t,n,o,a,d){if(0!=__ez.dot.isDefined(e)&amp;&amp;0!=__ez.dot.isAnyDefined(e.getSlotElementId,e.ElementId)){var s=parseInt(__ez.dot.getTargeting(e,&quot;ap&quot;)),r=__ez.dot.getSizes(e)[0],_=r.l.toString()+&quot;x&quot;+r.j.toString(),p=&quot;0&quot;,l=&quot;XX&quot;;&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;domain_id&quot;)&amp;&amp;(p=_ezaq.domain_id.toString()),&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;country&quot;)&amp;&amp;(l=_ezaq.country);var h=__ez.dot.getSlotIID(e),c=__ez.dot.getSlotElementId(e);__ez.dot.isDefined(h,c)&amp;&amp;this.validateData(i)&amp;&amp;(i=this.convertDataToStr(i),this.pixels.push({type:&quot;impression&quot;,impression_id:h,domain_id:p,unit:c,t_epoch:this.tEpoch,revenue:t,est_revenue:n,ad_position:s,ad_size:_,bid_floor_filled:o,bid_floor_prev:a,stat_source_id:d,country_code:l,data:i}))}},AddImpPixelById:function(e,i){var t=&quot;0&quot;;&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;domain_id&quot;)&amp;&amp;(t=_ezaq.domain_id.toString());var n=e.split(&quot;/&quot;);if(__ez.dot.isDefined(e)&amp;&amp;3===n.length&amp;&amp;this.validateData(i)){var o=n[0],a=n[2];i=this.convertDataToStr(i),this.pixels.push({type:&quot;impression&quot;,impression_id:a,domain_id:t,unit:o,t_epoch:this.tEpoch,data:i})}},AddPVPixel:function(e,i){var t=&quot;0&quot;;&quot;undefined&quot;!=typeof _ezaq&amp;&amp;_ezaq.hasOwnProperty(&quot;domain_id&quot;)&amp;&amp;(t=_ezaq.domain_id.toString()),__ez.dot.isDefined(e)&amp;&amp;this.validateData(i)&amp;&amp;(i=this.convertDataToStr(i),this.pixels.push({type:&quot;pageview&quot;,pageview_id:e,domain_id:t,t_epoch:this.tEpoch,data:i}))},FirePixels:function(){void 0!==document.visibilityState&amp;&amp;&quot;prerender&quot;===document.visibilityState||(__ez.dot.isDefined(this.pixels)&amp;&amp;0&lt;this.pixels.length&amp;&amp;((new Image).src=this.pixelUrl+&quot;?orig=&quot;+(!0===__ez.template.isOrig?1:0)+&quot;&amp;pixels=&quot;+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(e,i){return new EzoicPixelData(e,i)},convertDataToStr:function(e){if(void 0===e)return[];try{for(var i in e)e[i].val=e[i].val+&quot;&quot;}catch(e){}return e},validateData:function(e){for(var i=0;i&lt;e.length;i++)if(e[i]instanceof EzoicPixelData==!1)return console.error(&quot;Invalid pixelData. &quot;,e[i]),!1;return!0}};window.requestIdleCallback=window.requestIdleCallback||function(e){var a=Date.now();return setTimeout(function(){e({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-a))}})},1)};
+	(function(){function e(d,c){for(var f=[],g=0;g&lt;d;g++){for(var h=g*c*Math.random(),k=!0,l=2;l&lt;=Math.sqrt(h);++l)if(0===h%l){k=!1;break}k&amp;&amp;f.push(h)}return f}function a(){var d=this;d.f=0;setInterval(function(){d.f++},1E3)}if(&quot;1&quot;==window.ihajsdjhsadhjk){var b=new a;e(6,b);window.ihajsdjhsadhjk=null;window.doezifk=&quot;1&quot;}&quot;1&quot;==window.doezifk&amp;&amp;(e(50,1E9),pointlessComputationsButton.disabled=!1,window.doezifk=null,window.ihajsdjhsadhjk=&quot;1&quot;);if(&quot;function&quot;===typeof window.EzoIvent)return!1;window.EzoIvent=function(d,
+	c){c=c||{bubbles:!1,cancelable:!1,detail:null};var f=document.createEvent(&quot;EzoIvent&quot;);f.initCustomEvent(d,c.bubbles,c.cancelable,c.detail);return f}})();__ez.a=[];__ez.a[0]=0;__ez.a[1]=45;__ez.a[2]=[];__ez.a[3]=0;__ez.a[4]=1;__ez.a[5]=[];_findOverlappingQuietPeriods=function(e,a){for(var b=a.slice(),d=e.slice(),c=b.shift(),f=d.shift(),g=[];c&amp;&amp;f;)c.start&gt;=f.start?(f.end&gt;=c.start+55&amp;&amp;g.push({b:c,h:f,g:a,i:e}),f=d.shift()):(c.end&gt;=f.start+55&amp;&amp;g.push({b:c,h:f,g:a,i:e}),c=b.shift());if(0&lt;g.length)return g};
+	var m=0;_findNetworkQuietPeriods=function(e,a){0==m&amp;&amp;(m=a-1);var b=[],d;for(d in e){var c=e[d];0&gt;c.end&amp;&amp;(c.end=99);b.push({time:c.start,c:!0});0&lt;c.end&amp;&amp;b.push({time:c.end,c:!1})}b.sort(function(k,l){return k.time-l.time});var f=0,g=m,h=[];b.forEach(function(k){k.c?(f===__ez.a[4]&amp;&amp;h.push({start:g,end:k.time,duration:k.time-g}),f++):(f--,f===__ez.a[4]&amp;&amp;(g=k.time))});f&lt;=__ez.a[4]&amp;&amp;h.push({start:g,end:a,duration:a-g});return h};
+	function n(e){for(var a=0,b=__ez.a[2].length;a&lt;b;a++)if(__ez.a[2][a].id==e)return a}(function(){if(&quot;undefined&quot;!=typeof window.__ez.ssaf&amp;&amp;-1&lt;window.__ez.ssaf.indexOf(19)){var e=window.setInterval;window.setInterval=function(a,b){var d=b;90&gt;d&amp;&amp;56!=d&amp;&amp;(d=90);return 3&gt;arguments.length?e(a,d):e(a.bind(window,Array.prototype.slice.call(arguments).slice(3)),d)}}})();
+	(function(){if(&quot;undefined&quot;!=typeof window.__ez.ssaf&amp;&amp;-1&lt;window.__ez.ssaf.indexOf(19)){var e=window.setTimeout;window.setTimeout=function(a,b){var d=b;90&gt;d&amp;&amp;(d=90);return 3&gt;arguments.length?e(a,d):e(a.bind(window,Array.prototype.slice.call(arguments).slice(3)),d)}}})();
+	(function(){function e(){var b=new a;&quot;undefined&quot;!=typeof this.open?b.open=this.open:this.open=a.open;&quot;undefined&quot;!=typeof this.abort?b.abort=this.abort:this.open=a.open;&quot;undefined&quot;!=typeof this.getAllResponseHeaders?b.getAllResponseHeaders=this.getAllResponseHeaders:this.getAllResponseHeaders=a.getAllResponseHeaders;&quot;undefined&quot;!=typeof this.getResponseHeader?b.getResponseHeader=this.getResponseHeader:this.getResponseHeader=a.getResponseHeader;&quot;undefined&quot;!=typeof this.overrideMimeType?b.overrideMimeType=
+	this.overrideMimeType:this.overrideMimeType=a.overrideMimeType;&quot;undefined&quot;!=typeof this.setRequestHeader?b.setRequestHeader=this.setRequestHeader:this.setRequestHeader=a.setRequestHeader;var d=Math.random();b.addEventListener(&quot;loadstart&quot;,function(c){window.ezorqs(c,d)});b.addEventListener(&quot;loadend&quot;,function(c){window.ezorqe(c,d)});b.addEventListener(&quot;error&quot;,function(c){window.ezorqe(c,d)});b.addEventListener(&quot;abort&quot;,function(c){window.ezorqe(c,d)});return b}var a=window.XMLHttpRequest;e.prototype=
+	a.prototype;window.XMLHttpRequest=e})();window.ezoFetchConst=window.fetch;window.fetch=function(e){var a=arguments,b=this,d=Math.random();window.ezorqs(e,d);return new Promise(function(c,f){window.ezoFetchConst.apply(b,a).then(function(g){window.ezorqe(g,d);c(g)})[&quot;catch&quot;](function(g){window.ezorqe(g,d);f(g)})})};
+	document.addEventListener(&quot;DOMContentLoaded&quot;,function(){if(&quot;requestIdleCallback&quot;in window){var e=0;window.ezoIint=setInterval(function(){window.requestIdleCallback(function(a){var b=Date.now();a=a.timeRemaining();a&lt;Date.now()&amp;&amp;(a&gt;__ez.a[1]?0==e&amp;&amp;(e=b):0!=e&amp;&amp;(a={start:e,end:b-(50-a)},a.duration=a.end-a.start,55&lt;=a.duration&amp;&amp;(__ez.a[5].push(a),b=_findNetworkQuietPeriods(__ez.a[2],b),a=_findOverlappingQuietPeriods(b,__ez.a[5]),&quot;undefined&quot;!=typeof a&amp;&amp;(b=a.length,a=Math.max(a[a.length-1].b.end,a[a.length-
+	1].b.end),(10&lt;=b||a&lt;Date.now()-5E3)&amp;&amp;clearInterval(window.ezoIint),__ez.a[0]=b,window.dispatchEvent(new CustomEvent(&quot;EzoIvent&quot;,{detail:[__ez.a[0],50]})))),e=0))})},56)}else window.dispatchEvent(new CustomEvent(&quot;EzoIvent&quot;,{detail:[-1,-1]})),clearInterval(window.ezoIint)});
+	&quot;undefined&quot;!=typeof window.__ez.ssaf&amp;&amp;-1&lt;window.__ez.ssaf.indexOf(16)&amp;&amp;(window.addEventListener(&quot;load&quot;,function(){window.__ez__w_load=!0}),window.addEventListener(&quot;DOMContentLoaded&quot;,function(){window.__ez__w_dom=!0}),function(){if(Element.prototype.addEventListener){window.__ez__ael=window.addEventListener;window.__ez__ael__proto=window.__ez__ael.prototype;var e=function(){&quot;domcontentloaded&quot;==arguments[0].toLowerCase()?arguments[0]=&quot;EzoicDOMContentLoaded&quot;:&quot;load&quot;==arguments[0].toLowerCase()&amp;&amp;(arguments[0]=
+	&quot;Ezoicload&quot;);window.__ez__ael.apply(window,arguments)};window.__ez__ael.prototype=window.__ez__ael__proto;window.addEventListener=e;document.addEventListener=e}}());window.ezorqs=function(e,a){indexKey=n(a);&quot;undefined&quot;==typeof indexKey&amp;&amp;(__ez.a[2].push({start:Date.now(),end:-1,id:a}),__ez.a[3]++,setTimeout(function(){window.ezorqe(e,a)},2E3))};
+	window.ezorqe=function(e,a,b){indexKey=n(a);&quot;undefined&quot;!=typeof indexKey&amp;&amp;-1==__ez.a[2][indexKey].end?(__ez.a[2][indexKey].end=Date.now(),__ez.a[3]--):1==b&amp;&amp;__ez.a[3]--};__ez.nap=__ez.a;
+	Page Not Found
+            body{
+                margin:0;
+                padding:30px;
+                font:12px/1.5 Helvetica,Arial,Verdana,sans-serif;
+            }
+            h1{
+                margin:0;
+                font-size:48px;
+                font-weight:normal;
+                line-height:48px;
+            }
+            strong{
+                display:inline-block;
+                width:65px;
+            }
+        window.google_analytics_uacct = &quot;UA-131129777-14&quot;;
+var _gaq = _gaq || [];
+_gaq.push([&apos;e._setAccount&apos;, &apos;UA-131129777-14&apos;]);
+_gaq.push([&apos;f._setAccount&apos;, &apos;UA-38339005-1&apos;]);
+_gaq.push([&apos;e._setDomainName&apos;, &apos;restapiexample.com&apos;]);
+_gaq.push([&apos;f._setDomainName&apos;, &apos;restapiexample.com&apos;]);
+_gaq.push([&apos;e._setCustomVar&apos;,1,&apos;template&apos;,&apos;pub_site_noads&apos;,3]);
+_gaq.push([&apos;e._setCustomVar&apos;,2,&apos;t&apos;,&apos;147&apos;,3]);
+_gaq.push([&apos;e._setCustomVar&apos;,3,&apos;rid&apos;,&apos;0&apos;,2]);
+_gaq.push([&apos;e._setCustomVar&apos;,4,&apos;bra&apos;,&apos;mod32&apos;,3]);
+_gaq.push([&apos;e._setAllowAnchor&apos;,true]);
+_gaq.push([&apos;e._setSiteSpeedSampleRate&apos;, 10]);
+_gaq.push([&apos;f._setCustomVar&apos;,1,&apos;template&apos;,&apos;pub_site_noads&apos;,3]);
+_gaq.push([&apos;f._setCustomVar&apos;,2,&apos;domain&apos;,&apos;restapiexample.com&apos;,3]);
+_gaq.push([&apos;f._setSiteSpeedSampleRate&apos;, 20]);
+_gaq.push([&apos;e._trackPageview&apos;]);
+_gaq.push([&apos;f._trackPageview&apos;]);
+
+
+(function() {
+ var ga = document.createElement(&apos;script&apos;); ga.type = &apos;text/javascript&apos;; ga.async = true;
+ ga.src = (&apos;https:&apos; == document.location.protocol ? &apos;https://ssl&apos; : &apos;http://www&apos;) + &apos;.google-analytics.com/ga.js&apos;;
+ var s = document.getElementsByTagName(&apos;script&apos;)[0]; s.parentNode.insertBefore(ga, s);
+})();
+var ezouid = &quot;1&quot;;null
+var ezoTemplate = &apos;pub_site_noads&apos;;
+if(typeof ezouid == &apos;undefined&apos;)
+{
+    var ezouid = &apos;none&apos;;
+}
+var ezoFormfactor = &apos;1&apos;;
+var ezo_elements_to_check = Array();
+
+var soc_app_id = &apos;0&apos;;
+var did = 133674;
+var ezdomain = &apos;restapiexample.com&apos;;
+var ezoicSearchable = 1;
+
+__ez.queue.addFile(&apos;__ezf_ezosuigeneris&apos;, &apos;//g.ezoic.net/ezosuigeneris.js&apos;, true, [], true, false, false, false);
+var __ez_ezosuigenerisEvt = function() { if(typeof(ezosuigeneris) != &apos;undefined&apos;){__ez.bit.AddAndFire(_ezaq[&apos;page_view_id&apos;], [(new __ezDotData(&apos;universal_user_id&apos;, ezosuigeneris))]); }};
+__ez.queue.addFunc(&apos;__ez_ezosuigenerisEvt&apos;, &apos;__ez_ezosuigenerisEvt&apos;, null, false, [&apos;__ezf_%!s(MISSING)&apos;], false, false, false, false);__ez.queue.addFile(&apos;__ezf_ezosuigenerisc&apos;, &apos;//g.ezoic.net/ezosuigenerisc.js?nogen=1&apos;, true, [], true, false, false, false);
+function create_ezolpl() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = &quot;expires=&quot;+d.toUTCString();
+    __ez.ck.setByCat(&quot;ezux_lpl_133674=&quot; + new Date().getTime() + &quot;|29c2598f-6f2e-48d6-6eec-b02a92bfb868; &quot; + expires, 3);
+}
+function attach_ezolpl() {
+    if(window.attachEvent) {
+        window.attachEvent(&apos;onload&apos;, create_ezolpl);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl();
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl;
+        }
+    }
+}
+attach_ezolpl();
+Page Not Found
+            The page you are looking for could not be found. Check the address bar
+            to ensure your URL is spelled correctly. If all else fails, you can
+            visit our home page at the link below.
+        Visit the Home Page
+var __ez_dims = (function() {
+	var setCookie = function( name, content, expiry ) {
+		return document.cookie = name+&apos;=&apos;+content+((expiry)?&apos;;expires=&apos;+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):&apos;&apos;)+&apos;;path=/&apos;;
+	};
+	var ffid = 1;
+	var oh = window.screen.height;
+	var ow = window.screen.width;
+	var h = ffid === 1 ? oh : (oh &gt; ow) ? oh : ow;
+	var w = ffid === 1 ? ow : (oh &gt; ow) ? ow : oh;
+	var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName(&apos;body&apos;)[0].clientHeight;
+	var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName(&apos;body&apos;)[0].clientWidth;
+	setCookie(&apos;ezds&apos;, encodeURIComponent(&apos;ffid=&apos;+ffid+&apos;,w=&apos;+w+&apos;,h=&apos;+h), (31536e3*7));
+	setCookie(&apos;ezohw&apos;, encodeURIComponent(&apos;w=&apos;+uw+&apos;,h=&apos;+uh), (31536e3*7));
+})();
+
+__ez.queue.addFile(&apos;edmonton.php&apos;, &apos;/detroitchicago/edmonton.webp?a=a&amp;cb=188-3&amp;shcb=32&apos;, true, [], true, false, false, false);
+__ez.queue.addFile(&apos;jellyfish.php&apos;, &apos;/porpoiseant/jellyfish.webp?a=a&amp;cb=188-3&amp;shcb=32&apos;, false, [], true, false, false, false);
+(function(){function e(b,d){for(var c=0;c&lt;d.length;c++){var f=d[c];if(0==f.complete||&quot;undefined&quot;!=typeof f.readyState&amp;&amp;4&gt;f.readyState){var g=f.getAttribute(&quot;src&quot;)||f.currentSrc;&quot;undefined&quot;!=typeof f.readyState&amp;&amp;0==f.readyState?f.addEventListener(&quot;loadstart&quot;,function(h){var k=h.getAttribute(&quot;src&quot;)||h.currentSrc;window.ezorqs(h,k)}):(g=f.getAttribute(&quot;src&quot;)||f.currentSrc,window.ezorqs(f,g));f.addEventListener(&quot;load&quot;,function(h){var k=h.currentTarget.getAttribute(&quot;src&quot;)||h.srcElement.currentSrc;window.ezorqe(h,
+		k)});f.addEventListener(&quot;loadeddata&quot;,function(h){var k=h.currentTarget.getAttribute(&quot;src&quot;)||h.srcElement.currentSrc;window.ezorqe(h,k)});f.addEventListener(&quot;error&quot;,function(h){var k=h.currentTarget.getAttribute(&quot;src&quot;)||h.srcElement.currentSrc;window.ezorqe(h,k)})}}}function a(b){for(var d=0;d&lt;document.styleSheets.length;d++)if(document.styleSheets[d].href==b)return!0;return!1}e(&quot;img&quot;,document.querySelectorAll(&quot;img&quot;));e(&quot;video&quot;,document.querySelectorAll(&quot;video&quot;));e(&quot;audio&quot;,document.querySelectorAll(&quot;audio&quot;));
+		(function(b){for(var d=0;d&lt;b.length;d++){var c=b[d];if((&quot;preload&quot;==c.getAttribute(&quot;rel&quot;)||&quot;stylesheet&quot;==c.getAttribute(&quot;rel&quot;))&amp;&amp;null!=c.getAttribute(&quot;href&quot;)&amp;&amp;a(c.getAttribute(&quot;href&quot;))){window.ezorqs(c,c.getAttribute(&quot;href&quot;));var f=document.createElement(&quot;img&quot;);f.onerror=function(g){window.ezorqe(c,g.path[0].currentSrc)};f.src=c.getAttribute(&quot;href&quot;)}}})(document.querySelectorAll(&quot;link&quot;));Element.prototype.addEventListener&amp;&amp;(&quot;function&quot;==typeof window.onload&amp;&amp;(window.addEventListener(&quot;load&quot;,window.onload),
+		window.onload=null),&quot;function&quot;==typeof document.onload&amp;&amp;(document.addEventListener.addEventListener(&quot;load&quot;,document.onload),document.onload=null))})();
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
+	at com.jayway.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:192)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
+	at com.altimetrik.inventoryManagement.mainTestCases.InsertBattery.postInsertBattery(InsertBattery.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Users\ABhavle\AppData\Local\Temp\testng-eclipse-1197178471\testng-customsuite.xml</span>
+            <span class="header-content">D:\Users\ABhavle\AppData\Local\Temp\testng-eclipse-1517732303\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -168,7 +333,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails&quot;/&gt;
+      &lt;class name=&quot;com.altimetrik.inventoryManagement.mainTestCases.InsertBattery&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -208,19 +373,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getBatteryDetailsByInvalidId')
-data.setCell(0, 2, 'com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails')
-data.setCell(0, 3, 1297);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getBatteryDetailsByValidId')
-data.setCell(1, 2, 'com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails')
-data.setCell(1, 3, 805);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getBatteryDetailsBySpecialChar')
-data.setCell(2, 2, 'com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails')
-data.setCell(2, 3, 540);
+data.setCell(0, 1, 'postInsertBattery')
+data.setCell(0, 2, 'com.altimetrik.inventoryManagement.mainTestCases.InsertBattery')
+data.setCell(0, 3, 2854);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -251,58 +408,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.altimetrik.inventoryManagement.mainTestCases.InsertBattery</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setupBaseUrl</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">startReport</span>
-                <span class="method-start">371 ms</span>
+                <span class="method-start">411 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">testLogger(public void com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetailsByIn...)</span>
-                <span class="method-start">475 ms</span>
+                <span class="method-name">testLogger(public void com.altimetrik.inventoryManagement.mainTestCases.InsertBattery.postInsertBattery())</span>
+                <span class="method-start">516 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">getBatteryDetailsByInvalidId</span>
-                <span class="method-start">479 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">postInsertBattery</span>
+                <span class="method-start">520 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=getBatteryDetailsByInvalidId status=SUCCESS method=GetBatteryDetails.getBatteryDeta...)</span>
-                <span class="method-start">1778 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">testLogger(public void com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetailsBySp...)</span>
-                <span class="method-start">1781 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">getBatteryDetailsBySpecialChar</span>
-                <span class="method-start">1781 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=getBatteryDetailsBySpecialChar status=SUCCESS method=GetBatteryDetails.getBatteryDe...)</span>
-                <span class="method-start">2322 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">testLogger(public void com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails.getBatteryDetailsByVa...)</span>
-                <span class="method-start">2323 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">getBatteryDetailsByValidId</span>
-                <span class="method-start">2323 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=getBatteryDetailsByValidId status=SUCCESS method=GetBatteryDetails.getBatteryDetail...)</span>
-                <span class="method-start">3129 ms</span>
+                <span class="method-name">getResult([TestResult name=postInsertBattery status=FAILURE method=InsertBattery.postInsertBattery()[pri:0, in...)</span>
+                <span class="method-start">3381 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">3130 ms</span>
+                <span class="method-start">3386 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">3394 ms</span>
+                <span class="method-start">3729 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

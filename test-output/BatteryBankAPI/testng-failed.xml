@@ -3,19 +3,17 @@
 <suite name="Failed suite [BatteryBankAPI]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="BatteryBankAPI(failed)">
     <classes>
-      <class name="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails">
+      <class name="com.altimetrik.inventoryManagement.mainTestCases.CreateEmployee">
         <methods>
           <include name="afterClass"/>
           <include name="endReport"/>
           <include name="startReport"/>
-          <include name="getBatteryDetailsByInvalidId"/>
-          <include name="getBatteryDetailsBySpecialChar"/>
           <include name="testLogger"/>
-          <include name="getBatteryDetailsByValidId"/>
           <include name="setupBaseUrl"/>
+          <include name="postEmployee"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails -->
+      </class> <!-- com.altimetrik.inventoryManagement.mainTestCases.CreateEmployee -->
     </classes>
   </test> <!-- BatteryBankAPI(failed) -->
 </suite> <!-- Failed suite [BatteryBankAPI] -->

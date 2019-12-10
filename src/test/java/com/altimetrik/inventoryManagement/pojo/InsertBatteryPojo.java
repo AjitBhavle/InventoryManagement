@@ -279,12 +279,12 @@ public class InsertBatteryPojo {
 	}
 
 	@JsonAnyGetter
-	public Map<String, Object> getAdditionalProperties() {
+	public Map<String, Object> getInserBatteryJSON() {
 		return this.inserBatteryJSON;
 	}
 
 	@JsonAnySetter
-	public void setAdditionalProperty(String name, Object value) {
+	public void setInserBatteryJSON(String name, Object value) {
 		this.inserBatteryJSON.put(name, value);
 	}
 

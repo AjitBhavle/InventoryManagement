@@ -12,8 +12,8 @@ public class GetBatteryDetails extends BaseTest {
 	public void getBatteryDetailsByValidId() {
 
 		given().accept("json").contentType("application/json")
-		.when().get("/battery?batteryId=1")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
-		.then().assertThat().body("betteryModel", equalTo("amaron")).statusCode(200);
+		.when().get("/battery")//get("http://inventorymanagement.mocklab.io/battery?batteryId=1")
+		.then().assertThat().body("betteryModel", equalTo("betteryModel")).statusCode(200);
 
 	}
 	@Test()

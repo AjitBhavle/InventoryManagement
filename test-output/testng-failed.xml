@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.altimetrik.inventoryManagement.baseClass.BaseTest">
+      <class name="com.altimetrik.inventoryManagement.mainTestCases.InsertBattery">
         <methods>
           <include name="afterClass"/>
           <include name="endReport"/>
           <include name="startReport"/>
-          <include name="getBatteryDetailsByValidId"/>
           <include name="testLogger"/>
           <include name="setupBaseUrl"/>
           <include name="getResult"/>
+          <include name="postInsertBattery"/>
         </methods>
-      </class> <!-- com.altimetrik.inventoryManagement.baseClass.BaseTest -->
+      </class> <!-- com.altimetrik.inventoryManagement.mainTestCases.InsertBattery -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

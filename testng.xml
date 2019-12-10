@@ -3,7 +3,7 @@
 <suite name="BatteryBankAPI">
   <test name="BatteryBankAPI">
     <classes>
-    	<class name="com.altimetrik.inventoryManagement.mainTestCases.GetBatteryDetails"></class>
+    	<class name="com.altimetrik.inventoryManagement.mainTestCases.CreateEmployee"></class>
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

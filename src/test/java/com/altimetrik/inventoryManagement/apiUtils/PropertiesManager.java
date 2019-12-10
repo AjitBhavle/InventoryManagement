@@ -15,7 +15,7 @@ public class PropertiesManager {
      */
     public static void initializeProperties() throws IOException {
         properties = new Properties();
-        FileInputStream iStr = new FileInputStream("src\\test\\resources\\config.properties");
+        FileInputStream iStr = new FileInputStream("src\\main\\resources\\config.properties");
         properties.load(iStr);
         iStr.close();
     }
