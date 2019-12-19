@@ -1,6 +1,5 @@
 package com.altimetrik.inventoryManagement.baseClass;
 
-import static com.jayway.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.io.File;
@@ -31,24 +30,15 @@ public class BaseTest{
 	public JsonPath jp = null; //JsonPath
 	public static ExtentReports extent;
 	public static ExtentTest logger;
-
-	//Instantiate a Helper Test Methods (testUtils) Object	
+//Setting up the baseURL from config.property file
 	@BeforeSuite
 	public void setupBaseUrl() throws IOException {
 
-		/*String baseHost = System.getProperty("server.host");
-	        if(baseHost==null){
-	            baseHost = "http://localhost";
-	        }
-	        RestAssured.baseURI = baseHost;*/
 		PropertiesManager.initializeProperties();
 		
 		RestAssured.baseURI=PropertiesManager.getProperty("baseURI");
 		
 		System.out.println("This is URL:"+RestAssured.baseURI);
-
-
-		 //Setup Base URI
 
 	}
 
